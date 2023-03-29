@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "List of progress bar items",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "full-width",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_animate": {
+      "type": "boolean",
+      "required": false,
+      "title": "Animate",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Animate the items into view",
+      "translatable": false
+    },
+    "_percentInviewVertical": {
+      "type": "number",
+      "required": false,
+      "default": 70,
+      "isSetting": true,
+      "title": "Percent in view",
+      "inputType": "Number",
+      "validators": ["number"],
+      "help": "Controls what percentage of the items height needs to be in the viewport in order for the items to animate"
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item title",
+            "default": "",
+            "validators": [],
+            "help": "This is the item title",
+            "translatable": true
+          },
+          "percent": {
+            "type": "number",
+            "required": true,
+            "inputType": "Number",
+            "title": "Item percent",
+            "default": 0,
+            "validators": ["number"],
+            "help": "This is the item percent"
+          },
+          "label": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item label",
+            "default": "",
+            "validators": [],
+            "help": "This is the item label",
+            "translatable": true
+          },         
+          "_classes": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Classes",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Custom classes that are applied to the item."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "$anchor": "bars-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "full-width",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "Select the headings to find out more.",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_animate": {
+          "type": "boolean",
+          "title": "Animate",
+          "description": "Animate the items into view",
+          "default": false,
+          "_adapt": {
+            "translatable": false
+          }
+        },
+        "_percentInviewVertical": {
+          "type": "number",
+          "title": "Percent in view",
+          "description": "Controls what percentage of the items height needs to be in the viewport in order for the items to animate",
+          "default": 70,
+          "_adapt": {
+            "isSetting": true
+          }
+        },
+        "_items": {
+          "type": "array",
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "percent": {
+                "type": "number",
+                "title": "Percent",
+                "default": 0,
+                "minimum": 0,
+                "maximum": 100
+              },
+              "label": {
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+
+              "_classes": {
+                "type": "string",
+                "title": "Custom classes",
+                "description": "Custom classes that are applied to the item.",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

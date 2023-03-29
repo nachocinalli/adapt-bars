@@ -1,0 +1,37 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "bars",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Bars",
+  "displayTitle": "Bars Title",
+  "body": "This is optional body text.",
+  "instruction": "",
+  "_animate": true,
+  "_percentInviewVertical": 70,
+  "_items": [
+    {
+      "title": "Bar 1",
+      "percent": 25,
+      "label": "label 1",
+      "_classes": ""
+    },
+    {
+      "title": "Bar 2",
+      "percent": 50,
+      "label": "label 2",
+      "_classes": ""
+    },
+    {
+      "title": "Bar 3",
+      "percent": 75,
+      "label": "label 3",
+      "_classes": ""
+    }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}

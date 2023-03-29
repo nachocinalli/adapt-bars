@@ -1,0 +1,14 @@
+{
+  "name": "adapt-bars",
+  "version": "1.0.0",
+  "framework": ">=5.20.1",
+  "homepage": "https://github.com/nachocinalli/adapt-bars",
+  "bugs": "https://github.com/nachocinalli/adapt-bars/issues",
+  "component": "bars",
+  "targetAttribute": "_bars",
+  "displayName": "Bars",
+  "description": "A component that displays a list of progress bar items.",
+  "main": "/js/adapt-bars.js",
+  "keywords": ["adapt-plugin", "adapt-component"],
+  "license": "GPL-3.0"
+}
