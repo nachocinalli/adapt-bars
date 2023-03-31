@@ -12,24 +12,16 @@
           "type": "object",
           "default": {},
           "properties": {
-            "_components": {
+            "_bars": {
               "type": "object",
               "default": {},
+              "title": "Bars",
               "properties": {
-                "_bars": {
-                  "type": "object",
-                  "title": "Bars",
-                  "default": {},
-                  "properties": {
-                    "ariaRegion": {
-                      "type": "string",
-                      "title": "ARIA region",
-                      "default": "List of progress bars",
-                      "_adapt": {
-                        "translatable": true
-                      }
-                    }
-                  }
+                "ariaRegion": {
+                  "type": "string",
+                  "title": "ARIA region",
+                  "default": "List of progress bar",
+                  "translatable": true
                 }
               }
             }
